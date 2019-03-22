@@ -24,6 +24,7 @@
 }
 
 .fa-trash-alt {
+  cursor: pointer;
   font-size: 22px;
   padding-right: 7px;
 }
@@ -67,10 +68,11 @@
 
 
 .btn-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 120px);
+  grid-gap: 5px;
+  padding-left: 8px;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
   padding-bottom: 12px;
 }
 
@@ -90,9 +92,4 @@
     grid-gap: 30px;
   }
 
-  .btn-container {
-    width: 98%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
 }

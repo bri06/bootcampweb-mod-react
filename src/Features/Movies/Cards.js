@@ -37,10 +37,12 @@ const Cards = (props) => {
                 <h4 className="add-colletcion-tittle">Add to a collection:</h4>
                 <div className="btn-container">
                   {props.buttons.map((data) =>
-                    <button key={data.id} className="button" onClick={() => props.addCollection(data.id, item)}>
-                      {data.name}
-                      <i className="fas fa-plus-circle"></i>
-                    </button>)}
+                    <div>
+                      <button key={data.id} className="button" onClick={() => props.addCollection(data.id, item)}>
+                        {data.name}
+                        <i className="fas fa-plus-circle"></i>
+                      </button>
+                    </div>)}
                 </div>
               </div>
         })

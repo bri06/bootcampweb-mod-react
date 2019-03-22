@@ -10,9 +10,12 @@ const MovieDetail = ({ data, review }) => (
       <img className="detail-image" src={`${IMG_BASE_URL}${data.poster_path}`} alt={data.original_title} />
       <div className="detail-description">
         <p>{data.overview}</p>
-        <p>{
-          data.production_companies.map((data) => data.name)
-        }</p>
+        <div className="companies">
+          <h4>Producers: </h4>
+          <p>{
+            data.production_companies.map((data) => data.name)
+          }</p>
+        </div>
         <div className="releaseDate">
           <h4>Fecha de lanzamiento: </h4>
           <i>{data.release_date}</i>
@@ -27,8 +30,8 @@ const MovieDetail = ({ data, review }) => (
     <div className="reviews-container">
       <h2>Reviews</h2>
       {review.map(({ id, author, content }) => {
-        return <div key={id}>
-          <h3>{author}</h3>
+        return <div className="review-card" key={id}>
+          <h3>Written by: <i>{author}</i></h3>
           <p>{content}</p>
         </div>
       } )}

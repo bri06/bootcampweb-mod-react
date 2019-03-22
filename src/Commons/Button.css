@@ -23,9 +23,9 @@
   border: none;
   border-radius: 2px;
   display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 16px;
+  height: auto;
+  line-height: 30px;
+  padding: 0px 10px;
   text-transform: uppercase;
   background-color: #003cffb7;
   color: white;

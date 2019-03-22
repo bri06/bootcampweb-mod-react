@@ -1,16 +1,22 @@
+.card-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 5px;
+}
 
 .detail-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   border: .2px #d6d6d6 solid;
-  padding: 5px;
+  padding: 5px 5px 18px 5px;
   margin: 5px;
-  box-shadow: 3px 3px 13px -1px rgba(0,0,0,0.54);
+  box-shadow: 3px 3px 13px -1px rgba(0, 0, 0, 0.54);
 }
 
-.detail-description {
-  padding-left: 20px;
+.detail-image {
+  padding: 5px;
 }
 
 .releaseDate {
@@ -20,16 +26,57 @@
   padding-right: 15px;
 }
 
-.genres-container {
+.companies {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
+.genres-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
 .genre-tag {
   border: .8px solid #5878ca;
-  box-shadow: 3px 3px 13px -1px rgba(0,0,0,0.54);
+  box-shadow: 3px 3px 13px -1px rgba(0, 0, 0, 0.54);
   border-radius: 5px;
   padding: 5px;
   margin: 0 15px;
+}
+
+.reviews-container {
+  margin: 3px;
+  padding: 5px;
+  border: .2px #d6d6d6 solid;
+  box-shadow: 3px 3px 13px -1px rgba(0, 0, 0, 0.54);
+}
+
+.reviews-container h2 {
+  text-align: center;
+}
+
+.review-card {
+  border: .2px #d6d6d6 solid;
+  padding: 18px;
+  margin: 8px;
+  box-shadow: 0px 1px 10px -4px rgba(0, 0, 0, 1);
+}
+
+@media (min-width: 780px) {
+  .detail-container {
+    flex-direction: row;
+    margin-bottom: 15px;
+  }
+  .detail-image {
+    padding: 18px;
+  }
+  .detail-description p {
+    padding: 10px;
+  }
+  .card-detail {
+    padding: 0 80px;
+  }
 }
