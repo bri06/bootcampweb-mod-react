@@ -1,0 +1,35 @@
+
+.detail-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: .2px #d6d6d6 solid;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 3px 3px 13px -1px rgba(0,0,0,0.54);
+}
+
+.detail-description {
+  padding-left: 20px;
+}
+
+.releaseDate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.genres-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.genre-tag {
+  border: .8px solid #5878ca;
+  box-shadow: 3px 3px 13px -1px rgba(0,0,0,0.54);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 15px;
+}
