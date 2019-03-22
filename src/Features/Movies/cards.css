@@ -17,6 +17,23 @@
   box-shadow: 0 8px 6px -6px #0000006b;
 }
 
+.btn-delete {
+  color: red;
+  border-style: initial;
+  background-color: initial;
+}
+
+.fa-trash-alt {
+  font-size: 22px;
+  padding-right: 7px;
+}
+
+.date-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .card h1 {
   text-align: center;
 }
@@ -34,13 +51,20 @@
   padding: 0 12px;
 }
 
+.header-card-container h3 {
+  margin: 0;
+}
+
+.add-colletcion-tittle {
+  align-self: flex-start;
+  padding-left: 15px;
+}
+
 .button {
   align-self: flex-start;
-  margin: 3px;
-  /* margin: 3px;
-  height: 100%;
-  width: auto; */
+  margin: 3px 0;
 }
+
 
 .btn-container {
   display: flex;
@@ -48,6 +72,14 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding-bottom: 12px;
+}
+
+.fa-plus-circle {
+  padding: 0 5px;
+}
+
+.star-rating {
+  font-size: 25px;
 }
 
 @media (min-width: 780px) {

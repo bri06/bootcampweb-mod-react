@@ -12,9 +12,6 @@ const Cards = (props) => {
         props.items.map((item) => {
           item.poster_src = `${IMG_BASE_URL}${item.poster_path}`;
           return <div key={item.id} className="card">
-                {props.deleteButton && (
-                  <button onClick={() => props.deleteMovie(item.id)}>Eliminar</button>
-                )}
                 <h1>{item.original_title}</h1>
                 <Link to={`/movie/${item.id}`}>
                   <img className="card-image" src={item.poster_src} alt={item.title} />
@@ -28,12 +25,22 @@ const Cards = (props) => {
                   </div>
                 )}
                 <div className="header-card-container">
-                  <p>{item.release_date}</p>
+                  <div className="date-btn-container">
+                    <p>Release: <i>{item.release_date}</i></p>
+                    {props.deleteButton && (
+                      <button className="btn-delete" onClick={() => props.deleteMovie(item.id)}><i className="fas fa-trash-alt"></i></button>
+                    )}
+                  </div>
                   <h3>Description</h3>
                   <p>{item.overview}</p>
                 </div>
+                <h4 className="add-colletcion-tittle">Add to a collection:</h4>
                 <div className="btn-container">
-                  {props.buttons.map((data) => <button key={data.id} className="button" onClick={() => props.addCollection(data.id, item)}>{data.name}</button>)}
+                  {props.buttons.map((data) =>
+                    <button key={data.id} className="button" onClick={() => props.addCollection(data.id, item)}>
+                      {data.name}
+                      <i className="fas fa-plus-circle"></i>
+                    </button>)}
                 </div>
               </div>
         })
