@@ -20,9 +20,9 @@ class Header extends Component {
       <div className="header">
         <div className="header-links">
           <div className="img-container">
-            <a href="/home"><img className="logo" src={logo} alt="logo"/></a>
+            <a href="/"><img className="logo" src={logo} alt="logo"/></a>
           </div>
-          <a href="/home">Home</a>
+          <a href="/">Home</a>
           <a href="/mycollections">My collections</a>
         </div>
         <div className="movie-search">
