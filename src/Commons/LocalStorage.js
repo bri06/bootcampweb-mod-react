@@ -44,6 +44,9 @@ const api = () => {
     return {
       get: () => console.warn('Localstorage not supported'),
       set: () => console.warn('Localstorage not supported'),
+      update: () => console.warn('Localstorage not supported'),
+      getCollection: () => console.warn('Localstorage not supported'),
+      deleteMovie: () => console.warn('Localstorage not supported'),
     };
   }
 };
