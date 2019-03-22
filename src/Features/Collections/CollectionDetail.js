@@ -37,7 +37,6 @@ class CollectionDetail extends Component {
   }
 
   deleteMovie = (idMovie) => {
-    console.log(idMovie);
     const filterMovies = this.state.movies ? this.state.movies.filter((movie) => movie.id !== idMovie) : [];
     this.setState({ movies: filterMovies });
     const { match } = this.props;
@@ -64,7 +63,7 @@ class CollectionDetail extends Component {
 }
 
 CollectionDetail.defaultProps = {
-  name: "",
+  name: "Drama",
   id: 1,
   movies: []
 };

@@ -25,11 +25,13 @@ class Header extends Component {
           <a href="/">Home</a>
           <a href="/mycollections">My collections</a>
         </div>
-        <div className="movie-search">
-          <form onSubmit={(e) => e.preventDefault()}>
-            <input type="text" className="input-search" onChange={this.performSearch} placeholder="Type to search a movie..." />
-          </form>
-        </div>
+        {this.props.search && (
+          <div className="movie-search">
+            <form onSubmit={(e) => e.preventDefault()}>
+              <input type="text" className="input-search" onChange={this.performSearch} placeholder="Type to search a movie..." />
+            </form>
+          </div>
+        )}
       </div>
     );
   }
@@ -37,6 +39,7 @@ class Header extends Component {
 
 Header.defaultProps = {
   searchChangeHandler: () => '',
+  search: false
 };
 
 export default Header;

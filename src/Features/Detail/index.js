@@ -37,10 +37,7 @@ class DetailView extends Component {
     const id = this.state.id;
     return fetch(`${DEATIL_MOVIE}${id}/reviews${API_KEY}`)
     .then((res) => res.json())
-    .then(({ results }) => {
-      this.setState({ movieReview: results });
-      console.log(results);
-    })
+    .then(({ results }) => this.setState({ movieReview: results }))
     .catch(() => this.setState({ error: true }));
   }
 

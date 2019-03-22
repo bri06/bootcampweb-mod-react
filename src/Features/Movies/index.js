@@ -17,7 +17,8 @@ class Movies extends Component {
     this.state = {
       movies: [],
       loading: true,
-      error: false
+      error: false,
+      searchAvailable: true,
     };
   }
 
@@ -29,16 +30,13 @@ class Movies extends Component {
   handleTitleChange = (title) => {
     fetch(title ? `${MOVIE_URL}&query=${title}` : POPULAR_MOVIES)
     .then((res) => res.json())
-    .then(({ results }) => {
-      this.setState({ movies: results })
-      console.log(results);
-    })
+    .then(({ results }) => this.setState({ movies: results }))
     .catch(() => this.setState({ error: true }))
     .finally(() => this.setState({ loading: false }));
   }
 
   render() {
-    const { movies, loading, error } = this.state;
+    const { movies, loading, error, searchAvailable } = this.state;
     if(error) {
       return <NoMatch />;
     }
@@ -47,7 +45,7 @@ class Movies extends Component {
     }
     return(
       <Fragment>
-        <Header searchChangeHandler={debounce(this.handleTitleChange, 400)} />
+        <Header search={searchAvailable} searchChangeHandler={debounce(this.handleTitleChange, 400)} />
         <Cards
           addCollection={(id, movie) => update('collections', id, movie)}
           buttons={get('collections')}
