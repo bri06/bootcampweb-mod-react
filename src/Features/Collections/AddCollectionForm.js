@@ -23,7 +23,7 @@ class AddCollectionForm extends Component {
     return(
       <form onSubmit={this.handlerSubmit} className="login-form-container">
         <div className="form-group">
-          <label htmlFor="name">coleccion</label>
+          <label htmlFor="name">Create a coleccion:</label>
           <Input
             value={name}
             required
@@ -34,7 +34,7 @@ class AddCollectionForm extends Component {
           />
         </div>
         <div className="button-container">
-          <Button type="submit">Crear</Button>
+          <Button type="submit">Add</Button>
         </div>
       </form>
     );
