@@ -3,7 +3,6 @@ import NoMatch from '../AppRoutes/NoMatch';
 import Header from '../Header';
 import MovieDetail from './MovieDetail';
 
-// https://api.themoviedb.org/3/movie/299537?api_key=5b01525928c6fc3f12ef22349785dab5
 const DEATIL_MOVIE = 'https://api.themoviedb.org/3/movie/';
 const API_KEY = '?api_key=5b01525928c6fc3f12ef22349785dab5';
 
