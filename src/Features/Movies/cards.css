@@ -2,6 +2,7 @@
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   font-size: 2.3rem;
+  margin-top: 110px;
 }
 
 .cards-container {
@@ -99,4 +100,7 @@
     grid-gap: 30px;
   }
 
+  .popular-title {
+    margin-top: 80px;
+  }
 }

@@ -7,8 +7,6 @@ const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w185';
 
 const Cards = (props) => {
   return (
-    <Fragment>
-      <h1 className="popular-title">Popular Movies</h1>
       <div className="cards-container">
         {
           props.items.map((item) => {
@@ -54,7 +52,6 @@ const Cards = (props) => {
           })
         }
       </div>
-    </Fragment>
   )
 
 };

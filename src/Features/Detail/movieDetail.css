@@ -3,6 +3,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   margin: 5px;
+  margin-top: 60px;
 }
 
 .detail-container {

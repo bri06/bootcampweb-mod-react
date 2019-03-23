@@ -46,11 +46,12 @@ class Movies extends Component {
     return(
       <Fragment>
         <Header search={searchAvailable} searchChangeHandler={debounce(this.handleTitleChange, 400)} />
+        <h1 className="popular-title">Popular Movies</h1>
         <Cards
           addCollection={(id, movie) => update('collections', id, movie)}
           buttons={get('collections')}
           items={movies}
-        />
+          />
       </Fragment>
     );
   }
