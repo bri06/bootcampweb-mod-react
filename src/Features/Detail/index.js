@@ -47,7 +47,7 @@ class DetailView extends Component {
     }
 
     if(loading) {
-      return <p>Cargando loco</p>;
+      return <p>Loading...</p>;
     }
 
     return(

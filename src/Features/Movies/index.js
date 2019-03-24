@@ -41,7 +41,7 @@ class Movies extends Component {
       return <NoMatch />;
     }
     if(loading) {
-      return <p>Cargando...</p>;
+      return <p>Loading...</p>;
     }
     return(
       <Fragment>
